@@ -94,17 +94,17 @@ const getAuthors = (item: any) =>
       <h1 class="entry-title">MMP</h1>
     </header>
     <div class="entry-content">
-      <div class="d-flex">
+      <div class="d-flex flex-md-row flex-column">
         <div class="form-group">
           <input
-            class="form-control ds-input"
+            class="form-control ds-input query-field"
             v-model="queryField"
             @keyup.enter="loadData()"
             placeholder="Suche..."
             spellcheck="false"
           />
         </div>
-        <div class="form-group ml-4">
+        <div class="form-group ml-md-4">
           <select
             v-model.number="pageSize"
             @change="loadPage(1)"
@@ -117,7 +117,7 @@ const getAuthors = (item: any) =>
             <option>100</option>
           </select>
         </div>
-        <div class="form-group ml-5 pt-2">
+        <div class="form-group ml-md-5 pt-2">
           <b-form-checkbox v-model="experimentalSorting"
             >Experimentelles Sortieren</b-form-checkbox
           >
@@ -129,7 +129,7 @@ const getAuthors = (item: any) =>
       </div>
 
       <table
-        class="table table-striped"
+        class="table table-striped table-responsive"
         v-if="data.count > 0"
         :class="{ loading: isLoading }"
       >
