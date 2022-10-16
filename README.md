@@ -8,4 +8,4 @@ I implemented a very preliminary sorting algorithm, which counts the occurences 
 
 ## Notes on the quality of the API
 
-One of the things which I found a bit inconsistent is the mixed labeling of german and english terms. Furthermore some data seems to be duplicated (e.g. `results[].start_date` and `results[].text.start_date`).
+One of the things which I found a bit inconsistent is the mixed labeling of german and english terms.
